@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Product Form</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}" href="../css/main.css" />
+</head>
+<body>
+<form th:action="@{/}" th:object="${product}" method="post">
+    <p>
+        <label for="name">Product Name: </label>
+        <input type="text" id="name" name="name" th:field="*{name}" tabindex="1">
+    </p>
+
+    <p>
+        <label for="areaCode">Hot Line: </label>
+        <input type="text" id="areaCode" size="3" name="hotLine.areacode" th:field="*{hotLine.areacode}" tabindex="4">
+
+        <input type="text" size="3" name="hotLine.prefix" th:field="*{hotLine.prefix}" tabindex="5">
+
+        <input type="text" size="4" name="hotLine.number" th:field="*{hotLine.number}" tabindex="6">
+    </p>
+
+    <p id="buttons">
+        <input id="reset" type="reset">
+        <input id="submit" type="submit" tabindex="7" value="Add Product">
+    </p>
+</form>
+</body>
+</html>

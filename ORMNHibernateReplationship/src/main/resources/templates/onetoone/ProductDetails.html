@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}" href="../css/main.css" />
+</head>
+<body>
+<div id="global">
+    <h4>The product has been saved.</h4>
+    <p>
+    <h5>Details:</h5>
+    Product Name: <span th:text="${product.name}"></span><br />
+
+    Hot Line: <span th:text="${product.hotLine.areacode + '-' + product.hotLine.prefix + '-' + product.hotLine.number} "></span>
+    </p>
+
+    <form action="listproducts" method="get">
+        <input id="submit" type="submit" value="List products">
+    </form>
+
+</div>
+</body>
+</html>
