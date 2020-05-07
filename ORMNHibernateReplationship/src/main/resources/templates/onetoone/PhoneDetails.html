@@ -9,14 +9,14 @@
     <h4>The product has been saved.</h4>
     <p>
     <h5>Details:</h5>
-    Product Name: <span th:text="${phone.product.name}"></span> <br />
+    Product Name: <span th:text="${cellPhone.product.name}"></span> <br />
 
     Hot Line:
-    <span th:text="${phone.areacode + '-' + phone.prefix + '-' + phone.number}"></span>
+    <span th:text="${cellPhone.areacode + '-' + cellPhone.prefix + '-' + cellPhone.number}"></span>
 
     </p>
 
-    <form th:action="@{/phone/add}" method="get">
+    <form th:action="@{/cellPhone/add}" method="get">
         <input id="submit" type="submit" value="List products">
     </form>
 

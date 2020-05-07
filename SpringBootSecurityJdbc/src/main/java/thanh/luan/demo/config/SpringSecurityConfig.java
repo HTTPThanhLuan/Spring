@@ -52,6 +52,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/").permitAll()
                 .and().formLogin();
 
+
+        //Those two settings below is to enable access h2 database via browser
+        http.csrf().disable();
+        http.headers().frameOptions().disable();
     }
 
     @Bean

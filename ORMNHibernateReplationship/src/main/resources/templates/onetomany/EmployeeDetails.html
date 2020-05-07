@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Save Employee</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}" href="../css/main.css" />
+</head>
+<body>
+<div id="global">
+    <h4>The employee has been saved.</h4>
+    <p>
+    <h5>Details:</h5>
+    Employee Name: <span th:text="${employee.name}"></span><br />
+
+    <p th:each="cellPhone: ${employee.cellPhones}">
+        Phone Number: <span th:text="${cellPhone.areaCode + '-' + cellPhone.prefix + '-' + cellPhone.number}"></span><br />
+    </p>
+
+</div>
+</body>
+</html>

@@ -24,14 +24,14 @@ public class Phone {
 
   // @OneToOne(cascade = CascadeType.ALL) //// Default is JoinColumn
     @OneToOne(mappedBy = "hotLine", cascade = CascadeType.ALL)
-    // mappedBy = "hotLine" tell hibernate don't do anything in my side. In this case is don't create product_Id In Phone Table
+    // mappedBy = "hotLine" tell hibernate don't do anything in my side. In this case is don't create product_Id In CellPhone Table
     @Getter @Setter
     private Product product;
 
 
     @Override
     public String toString() {
-        return "Phone [areacode=" + areacode + ", number=" + number +", prefix=" + prefix + "]";
+        return "CellPhone [areacode=" + areacode + ", number=" + number +", prefix=" + prefix + "]";
     }
 
 }
