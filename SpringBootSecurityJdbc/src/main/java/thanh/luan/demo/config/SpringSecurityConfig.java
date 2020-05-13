@@ -49,7 +49,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/admin").hasRole("ADMIN") // it also match with  path query parameter (queryString)
                 .antMatchers("/user").hasRole("USER")
-                .antMatchers("/").permitAll()
+                .antMatchers("/", "/h2-console/**").permitAll()
                 .and().formLogin();
 
 
